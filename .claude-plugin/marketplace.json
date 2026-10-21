@@ -1,12 +1,12 @@
 {
   "name": "navaigate-sales-skills",
-  "description": "Practical technical-sales workflows for Microsoft 365 teams.",
+  "description": "Selling at AI Speed and practical technical-sales workflows for Microsoft 365 teams.",
   "owner": { "name": "NavAIgate" },
   "plugins": [
     {
       "name": "navaigate-sales",
       "source": "./",
-      "description": "Five practical sales skills for Microsoft 365 teams."
+      "description": "The four Selling at AI Speed workflows and five supporting sales skills."
     }
   ]
 }

@@ -32,6 +32,8 @@ Use real links, record references or document titles with page/section locations
 
 ## Run the review
 
+For the **Selling at AI Speed** review, first use [the deal-health inspection foundation](#resource-references-deal-health-foundation-md): committee coverage, all eight MEDDPICC dimensions, evidence, seller corrections and reranked actions. Complete that provisional foundation even if no separate Deal Health Reviewer skill is installed. If a current, source-linked and seller-reviewed assessment is supplied, reuse it and inspect changes rather than needlessly rebuilding it. Then run the loss case below.
+
 Read the customer's situation before applying the team's solution. Test the plan against these questions, concentrating on what is material rather than filling every category:
 
 1. **Need and timing:** what outcome matters to the buyer, what happens if they do nothing, and is the deadline theirs or ours?
@@ -60,6 +62,25 @@ Lead with a provisional **pursue, qualify or hold** recommendation and its reaso
 Keep the first output to roughly one page, with the evidence ledger and source detail below it if needed. Write directly, without insulting the team or the customer. Do not hide genuine weaknesses, invent urgency, misrepresent alternatives, or turn the exercise into pressure tactics.
 
 This workflow is read-only apart from producing its review. Do not send the review to the customer, update CRM fields, book meetings or create tasks from the action plan. Those require an explicit user request and the relevant available tools. Call saved files “saved” only after verifying them, and call a proposed action “proposed”. Keep customer material and review outputs in the participant's private workspace, outside this public skill repository.
+
+---
+
+<a id="resource-references-deal-health-foundation-md"></a>
+
+## Included resource: references/deal-health-foundation.md
+
+# Selling at AI Speed foundation for Black Hat
+
+Use this before the loss-case review when the user asks for the original Selling at AI Speed method. It is self-contained; the separate Deal Health Reviewer adds fuller templates and practice but is not required to run this skill.
+
+1. **Map the committee.** For each evidenced person give role in this decision, Champion/Supporter/Neutral/Blocker/Unknown, strong/thin/unknown relationship, source/date and coverage gap. In a diagram use solid lines for evidenced strong ties and dotted lines for weak, absent or inferred ties, labelled accordingly. Keep unidentified roles separate from known people. A friendly contact is not automatically a champion, and a title does not prove budget authority. Flag reliance on one person and an unknown economic buyer.
+2. **Inspect MEDDPICC.** Produce eight rows: Metrics (outcome, baseline, owner); Economic Buyer (authority for this spend); Decision Criteria (technical, business, governance and commercial needs); Decision Process (steps, owners, dates); Paper Process (contracting, legal, security, procurement); Identify Pain (owned problem and consequence); Champion (influence plus an observed action); Competition (confirmed alternatives including status quo). For each show Green/Amber/Red, evidence/date, contradiction and the next question. Green requires support; Amber is partial/stale/untested; Red is a consequential gap or contradiction. Mark missing evidence **unknown**, never buyer rejection. Do not invent framework definitions or win probabilities.
+3. **Invite the seller's judgement.** Deliver the provisional result, then ask the seller to inspect three consequential ratings or lines and explain changes or confirmations. Do not invent corrections or force changes where none are warranted. Record before, correction, reason/source and after. New seller testimony remains attributed testimony; no fabricated corroborating quote. Leave approval pending until it happens.
+4. **Rerank the next three moves.** After a material correction, reconsider the ranking and loss case. Each move needs a reason, proposed owner/timing and required proof. Unknown owners/dates remain to agree. A correction that creates a confirmed introduction can replace a stale recommendation to request one.
+5. **Run the loss case.** Use the current corrected map and assessment to explain the credible ways the deal fails and the one move that would most reduce risk. Do not claim a seller target is buyer agreed or a technical pilot establishes commercial commitment.
+
+Keep the summary short and put the map, eight-row evidence table and correction log beneath it. Preserve source coverage and draft/review status. Prepared handoffs do not update another app or CRM. No external action is authorised by a rating or recommendation.
+
 
 ---
 

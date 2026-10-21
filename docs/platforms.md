@@ -1,6 +1,6 @@
 # Choose where you work
 
-These are the same five workflows packaged in different ways. Choose one product and complete one small task before adding more tools. No paid model API key is required by this repository.
+The four Selling at AI Speed skills and five supporting workflows are packaged for different products. Choose one product and complete one small task before adding more tools. No paid model API key is required by this repository.
 
 ## Claude Code
 
@@ -11,7 +11,9 @@ In Claude Code, run:
 /plugin install navaigate-sales@navaigate-sales-skills
 ```
 
-Restart the session if the skills do not appear. Then use `/navaigate-sales:meeting-prep` followed by your request. The other names are `salesforce-admin`, `black-hat`, `build-my-voice` and `qbr`.
+Restart the session if the skills do not appear. Use `/navaigate-sales:deal-health-reviewer` followed by your request. The other original-workshop names are `whitespace-mapper`, `basho-engine` and `post-meeting-agent`. Supporting names are `meeting-prep`, `salesforce-admin`, `black-hat`, `build-my-voice` and `qbr`.
+
+Existing installations: update this marketplace and plugin through `/plugin`, then restart the session. Check that the displayed version is **1.1.0** and that the new names appear. Merely pulling this repository does not update a cached plugin installation.
 
 For local inspection without installing anything globally:
 
@@ -24,12 +26,14 @@ An organisation may restrict plugin installation. Use its approved distribution 
 
 ## Claude Cowork
 
-1. Download `navaigate-sales-plugin-v1.0.1.zip` from [Releases](https://github.com/skyremote/navaigate-sales-skills/releases/latest).
+1. Download `selling-at-ai-speed-plugin-v1.1.0.zip` for just the original four, or `navaigate-sales-plugin-v1.1.0.zip` for all nine, from [Releases](https://github.com/skyremote/navaigate-sales-skills/releases/latest). Choose one so the same skill is not loaded twice.
 2. Open Cowork, then **Customize > Plugins**, and upload the custom plugin file. Labels may vary by organisation and app version; use the custom plugin upload control.
 3. Start a task and select the skill using `/` or the skill picker. Use one of the README starter requests.
 4. Enable the organisation-approved Microsoft 365 connection separately. Select a private working folder when saving outputs.
 
-The ZIP includes the five instruction folders and plugin manifest. It contains no executable MCP server, hooks, credentials or automatic connector installation. Individual skill ZIPs are also supplied for environments that allow skill uploads instead of plugins. If plugins are disabled, use the Markdown task file as instructions with approved attachments; this is a manual fallback, not a native plugin installation.
+The four-skill plugin is named `selling-at-ai-speed`; the full plugin is `navaigate-sales`. Select skills from the picker or use the installed plugin's prefix, for example `/selling-at-ai-speed:deal-health-reviewer` for the four-skill ZIP. When updating an existing plugin, use its replace/update control and check the installed version and skill list rather than assuming that downloading a ZIP updated it.
+
+Each ZIP includes its instruction folders and plugin manifest. It contains no executable MCP server, hooks, credentials or automatic connector installation. Individual skill ZIPs are also supplied for environments that allow skill uploads instead of plugins. If plugins are disabled, use the Markdown task file as instructions with approved attachments; this is a manual fallback, not a native plugin installation.
 
 ## ChatGPT online
 

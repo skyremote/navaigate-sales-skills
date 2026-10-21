@@ -32,6 +32,8 @@ Use real links, record references or document titles with page/section locations
 
 ## Run the review
 
+For the **Selling at AI Speed** review, first use [the deal-health inspection foundation](references/deal-health-foundation.md): committee coverage, all eight MEDDPICC dimensions, evidence, seller corrections and reranked actions. Complete that provisional foundation even if no separate Deal Health Reviewer skill is installed. If a current, source-linked and seller-reviewed assessment is supplied, reuse it and inspect changes rather than needlessly rebuilding it. Then run the loss case below.
+
 Read the customer's situation before applying the team's solution. Test the plan against these questions, concentrating on what is material rather than filling every category:
 
 1. **Need and timing:** what outcome matters to the buyer, what happens if they do nothing, and is the deadline theirs or ours?

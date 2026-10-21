@@ -1,4 +1,22 @@
-# Validation for v1.0.1
+# Validation
+
+## Current release: v1.1.0 — Selling at AI Speed
+
+Validated 21 October 2026. All nine skill folders pass frontmatter checks. The full plugin and the separate four-skill plugin have validated manifests. The package validator checks the exact four-workflow subset, canonical resource hashes, self-contained ChatGPT files, packaged Markdown links and archive paths. Five automated packaging tests also pass.
+
+Independent reviewers applied all four new skills to synthetic inputs and produced actual outputs. Deal Health and Whitespace were run again after seller corrections; Post-Meeting was run again after a disputed deadline. The enhanced Black Hat foundation was also checked separately. See the [new scenarios](../evals/selling-at-ai-speed-scenarios.md) and the [evaluation index](../evals/README.md).
+
+| Workflow | Observed checks |
+|---|---|
+| Deal Health | All eight dimensions and committee coverage; no invented authority or buyer-agreed close date; seller-reported Finance introduction changed the next action without implying acceptance. |
+| Whitespace | Blank cells stayed Unknown; paused buying centre was parked; an existing-pilot correction changed the action to adoption validation. |
+| Basho | Wrong-company savings claim rejected; three distinct role drafts were 43, 37 and 43 words; no unsupported ROI or sends. |
+| Post-Meeting | Meeting-relative dates, ambiguous speakers and conditional promises handled; correction propagated to commitments, email, CRM notes and handoffs. |
+| Black Hat | Original inspection foundation exercised before the loss case; undefined framework acronyms remained undefined and human review remained pending. |
+
+These are text-workflow simulations, not participant usability acceptance or live Outlook/Salesforce integration tests. Native plugin upload and each participant's approved connectors still require verification in their own environment. The ZIPs contain no connector or credential installation.
+
+## Previous release: v1.0.1
 
 Validated 21 October 2026. The evidence below establishes packaging correctness and behaviour on synthetic tasks. Participant tenant connections and in-product installations have not been exercised.
 

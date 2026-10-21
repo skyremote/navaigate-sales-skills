@@ -7,7 +7,8 @@ import re
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-SLUGS = ('meeting-prep', 'salesforce-admin', 'black-hat', 'build-my-voice', 'qbr')
+SELLING_SLUGS = ('deal-health-reviewer', 'whitespace-mapper', 'basho-engine', 'post-meeting-agent')
+SLUGS = SELLING_SLUGS + ('meeting-prep', 'salesforce-admin', 'black-hat', 'build-my-voice', 'qbr')
 VERSION = json.loads((ROOT / '.claude-plugin/plugin.json').read_text())['version']
 
 
@@ -91,6 +92,29 @@ def build():
     write_zip(dist / f'navaigate-sales-plugin-v{VERSION}.zip', plugin_entries)
     write_zip(dist / f'chatgpt-workflows-v{VERSION}.zip',
               {p.name: p.read_bytes() for p in sorted(chat.glob('*.md'))})
+    # A four-skill Cowork plugin, generated from the same canonical skill folders.
+    subset = {name: data for name, data in plugin_entries.items()
+              if any(name.startswith(f'skills/{slug}/') for slug in SELLING_SLUGS)}
+    metadata = json.loads((ROOT / '.claude-plugin/plugin.json').read_text())
+    metadata.update(name='selling-at-ai-speed', description='The four original Selling at AI Speed workflows, converted into portable skills.')
+    subset['.claude-plugin/plugin.json'] = (json.dumps(metadata, indent=2) + '\n').encode()
+    subset['LICENSE'] = (ROOT / 'LICENSE').read_bytes()
+    start = ('# Selling at AI Speed\n\nFour reusable skills converted from the original NavAIgate workshop: '
+             'Deal Health Reviewer, Whitespace Mapper, Basho Engine and Post-Meeting Agent. '
+             'Each includes evidence checks, a participant judgement step, output templates and fictional practice.\n\n'
+             'Upload this ZIP through Cowork\'s custom plugin control. The plugin name is `selling-at-ai-speed`; '
+             'select a skill from the picker or use `/selling-at-ai-speed:deal-health-reviewer`. '
+             'Connect approved tools separately, or use approved files. Nothing is sent or written to CRM by this plugin.\n\n')
+    for slug in SELLING_SLUGS:
+        start += f'- [{slug}](skills/{slug}/SKILL.md)\n'
+        subset[f'chatgpt/{slug}.md'] = (chat / f'{slug}.md').read_bytes()
+    start += ('\nFor Claude Code, install the full `navaigate-sales` plugin from the repository marketplace. '
+              'For ChatGPT online, upload a self-contained file from `chatgpt/` to a private Project. '
+              '[Full setup and practice guide](https://github.com/skyremote/navaigate-sales-skills/blob/main/docs/selling-at-ai-speed.md).\n')
+    subset['README.md'] = start.encode()
+    write_zip(dist / f'selling-at-ai-speed-plugin-v{VERSION}.zip', subset)
+    write_zip(dist / f'selling-at-ai-speed-chatgpt-v{VERSION}.zip',
+              {f'{slug}.md': (chat / f'{slug}.md').read_bytes() for slug in SELLING_SLUGS})
     manifest = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
                 for slug in SLUGS for p in skill_files(ROOT / 'skills' / slug)}
     (dist / 'source-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')

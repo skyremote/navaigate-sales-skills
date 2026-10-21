@@ -15,3 +15,14 @@ Checked 21 October 2026. These links document product capabilities and setup; th
 | [Salesforce: working with records](https://developer.salesforce.com/docs/platform/api-rest/guide/using-resources-working-with-records.html) | Record retrieval and update operations; actual permissions still apply. |
 
 The pack does not require a custom Microsoft Graph application. If an organisation builds its own connector, its administrators own the permissions and security review. Never paste credentials into a skill or publish authentication files.
+
+## Selling at AI Speed conversion
+
+Reviewed directly from NavAIgate's retained original workshop materials on 21 October 2026:
+
+- Selling at AI Speed HTML deck and speaker text.
+- Sales AI Playbook.
+- Exercise 1: Deal Health; Exercise 2: Whitespace; Exercise 3: Basho; Exercise 4: Post-Meeting.
+- Original agent knowledge base, MEDDPICC rubric, Basho rubric and relevant product/value references.
+
+The four new skills preserve the original workflows and human judgement exercises. The public repository contains rewritten skill instructions and newly fictional practice, not the raw gated knowledge PDFs or original custom GPT configuration exports. Source coverage and intended handoffs are explained in [the conversion guide](selling-at-ai-speed.md). Current customer contract terms, organisation policies, product availability and permissions must come from the actual task's approved evidence.

@@ -5,7 +5,7 @@ import hashlib
 import json
 import re
 import zipfile
-from build import ROOT, SLUGS, VERSION, chatgpt_bundle, skill_files
+from build import ROOT, SELLING_SLUGS, SLUGS, VERSION, chatgpt_bundle, skill_files
 
 
 def validate():
@@ -32,7 +32,7 @@ def validate():
             for name in archive.namelist():
                 assert not name.startswith('/') and '..' not in Path(name).parts and '\\' not in name
                 assert not any(part in ('private', 'outputs', '.git', 'node_modules') for part in Path(name).parts)
-            if archive_path.name.startswith('navaigate-sales-plugin-'):
+            if '-plugin-' in archive_path.name:
                 import posixpath
                 names = set(archive.namelist())
                 for name in names:
@@ -43,6 +43,14 @@ def validate():
                             continue
                         destination = posixpath.normpath(posixpath.join(posixpath.dirname(name), target.split('#')[0]))
                         assert destination in names or any(p.startswith(destination.rstrip('/') + '/') for p in names), f'Broken packaged link: {name} -> {target}'
+            if archive_path.name.startswith('selling-at-ai-speed-plugin-'):
+                assert json.loads(archive.read('.claude-plugin/plugin.json'))['name'] == 'selling-at-ai-speed'
+                actual = {name.split('/')[1] for name in archive.namelist() if name.startswith('skills/')}
+                assert actual == set(SELLING_SLUGS), 'Standalone plugin must contain exactly four original workflows'
+                for slug in SELLING_SLUGS:
+                    for path in skill_files(ROOT / 'skills' / slug):
+                        name = f'skills/{slug}/{path.relative_to(ROOT / "skills" / slug)}'
+                        assert archive.read(name) == path.read_bytes(), f'Standalone plugin drift: {name}'
     # Check local Markdown links in source docs; generated web bundles use in-file anchors.
     for directory in ('skills', 'docs'):
         for path in (ROOT / directory).rglob('*.md'):
@@ -53,7 +61,7 @@ def validate():
     for line in (ROOT / 'dist/SHA256SUMS.txt').read_text().splitlines():
         digest, name = line.split('  ', 1)
         assert hashlib.sha256((ROOT / 'dist' / name).read_bytes()).hexdigest() == digest, f'Checksum drift: {name}'
-    print('PASS: five skills; fresh web bundles; exact ZIP resources; links; checksums; safe archive paths.')
+    print(f'PASS: {len(SLUGS)} skills; four-skill standalone plugin; fresh web bundles; exact ZIP resources; links; checksums; safe paths.')
 
 
 if __name__ == '__main__':

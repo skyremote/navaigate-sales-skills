@@ -1,7 +1,7 @@
 {
   "name": "navaigate-sales",
-  "version": "1.0.1",
-  "description": "Five practical technical-sales skills: meeting preparation, Salesforce administration, Black Hat deal review, personal writing voice and QBRs.",
+  "version": "1.1.0",
+  "description": "Selling at AI Speed: Deal Health, Whitespace, Basho and Post-Meeting workflows, plus meeting prep, Salesforce admin, Black Hat, personal writing voice and QBR skills.",
   "author": { "name": "NavAIgate", "url": "https://navaigate.dev" },
   "homepage": "https://github.com/skyremote/navaigate-sales-skills",
   "repository": "https://github.com/skyremote/navaigate-sales-skills",

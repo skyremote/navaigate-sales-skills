@@ -1,10 +1,25 @@
 # NavAIgate Sales Skills
 
-Five reusable workflows for technical-sales teams using Microsoft 365. Prepare for a customer conversation, keep Salesforce accurate, challenge a deal, build your own writing voice and run a useful QBR.
+The four **Selling at AI Speed** agents, converted into reusable skills for technical-sales teams, alongside five supporting Microsoft 365 sales workflows.
 
 **Start with one task. You do not need to write code.** Each skill explains what to read, what to produce and how to check the result. Your connected tools supply the data; the skill supplies the method.
 
-## Choose your first task
+## Selling at AI Speed — start here
+
+These follow the original workshop's method: inspect the evidence, correct the AI's interpretation and carry the reviewed result into the next conversation.
+
+| Skill | Start with this request | What you get |
+|---|---|---|
+| [Deal Health Reviewer](skills/deal-health-reviewer/SKILL.md) | “Review this account. Show the committee map, MEDDPICC evidence, next three moves and why we could lose. Let me correct the assessment.” | Relationship coverage, qualification evidence, seller corrections and a red-team review. |
+| [Whitespace Mapper](skills/whitespace-mapper/SKILL.md) | “Map our buying centres against the product footprint. Rank the expansion plays, then help me correct the ranking.” | Owned/Partial/Whitespace/Unknown matrix, ranked plays, first stakeholder and a corrected expansion thesis. |
+| [Basho Engine](skills/basho-engine/SKILL.md) | “Find a verified reason to contact this account, then draft three short messages for different committee members. Do not send.” | Dated trigger evidence, rejected claims and three distinct outreach drafts under 80 words each. |
+| [Post-Meeting Agent](skills/post-meeting-agent/SKILL.md) | “Process this transcript. Show what each side actually agreed, changes in deal evidence, a follow-up draft and CRM-ready notes.” | Recap, dual-sided commitments, evidence changes and handoffs to the other workflows. |
+
+**[Download just these four for Cowork](https://github.com/skyremote/navaigate-sales-skills/releases/latest/download/selling-at-ai-speed-plugin-v1.1.0.zip)** · **[ChatGPT files for these four](https://github.com/skyremote/navaigate-sales-skills/releases/latest/download/selling-at-ai-speed-chatgpt-v1.1.0.zip)** · **[Start and practice guide](docs/selling-at-ai-speed.md)**
+
+The four connect through reviewed handoff text: **meeting → Deal Health → Whitespace → Basho → next meeting**. No data is automatically copied between products or written to CRM.
+
+## Supporting workflows
 
 | Skill | Start with this request | What you get |
 |---|---|---|
@@ -16,7 +31,7 @@ Five reusable workflows for technical-sales teams using Microsoft 365. Prepare f
 
 ## Get the pack
 
-- **Claude Cowork:** [download the plugin ZIP](https://github.com/skyremote/navaigate-sales-skills/releases/latest/download/navaigate-sales-plugin-v1.0.1.zip) and upload it through Cowork's custom plugin control.
+- **Claude Cowork:** use the four-skill download above, or [download all nine skills](https://github.com/skyremote/navaigate-sales-skills/releases/latest/download/navaigate-sales-plugin-v1.1.0.zip). Upload the chosen ZIP through Cowork's custom plugin control. Choose one to avoid duplicate skills.
 - **Claude Code:** add this repository as a plugin marketplace, then install `navaigate-sales`.
 - **ChatGPT online:** [choose a self-contained Markdown workflow](chatgpt/), upload it to a private Project and ask ChatGPT to follow it. No terminal required.
 
@@ -48,7 +63,7 @@ Do the same task again with a different customer. The reusable instructions are 
 | Source evidence | Lets you check why the result says what it says. |
 | Your judgement | Corrects the result and authorises external changes when needed. |
 
-Installing this pack does not connect Outlook or Salesforce. Use your organisation's approved connections. If a source is unavailable, the assistant must say so and work from approved files instead. Salesforce changes need a clear record and action; the other four workflows produce private drafts or files and do not send messages.
+Installing this pack does not connect Outlook or Salesforce. Use your organisation's approved connections. If a source is unavailable, the assistant must say so and work from approved files instead. Only Salesforce Admin supports explicitly authorised record changes. The other workflows produce private drafts or files and do not send messages.
 
 The voice skill creates **your own writing profile**, not an audio voice clone. It reviews your own writing, produces three drafts for you to edit and turns those edits into reusable guidance. It does not monitor your mailbox in the background or publish your profile here.
 
