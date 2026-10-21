@@ -1,0 +1,3 @@
+# Repository rules
+
+This public repository contains five reusable technical-sales skills, synthetic examples and cross-platform installation guides. Use British English and plain language. Keep instructions in skills/*/SKILL.md; generated platform bundles must come from those sources. Do not commit real emails, transcripts, personal voice profiles, customer records, credentials or local session files. Runtime outputs belong outside the repository or under ignored private/ and outputs/ folders. Distinguish retrieved evidence from inference, and a draft from an action that actually completed. Do not send messages or modify CRM records unless the user explicitly authorises that action. Validate package paths and generated bundles before publishing.

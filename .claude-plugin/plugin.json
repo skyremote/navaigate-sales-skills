@@ -1,0 +1,9 @@
+{
+  "name": "navaigate-sales",
+  "version": "1.0.0",
+  "description": "Five practical technical-sales skills: meeting preparation, Salesforce administration, Black Hat deal review, personal writing voice and QBRs.",
+  "author": { "name": "NavAIgate", "url": "https://navaigate.dev" },
+  "homepage": "https://github.com/skyremote/navaigate-sales-skills",
+  "repository": "https://github.com/skyremote/navaigate-sales-skills",
+  "license": "MIT"
+}

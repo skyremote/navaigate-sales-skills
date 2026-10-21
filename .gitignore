@@ -1,0 +1,17 @@
+# Private customer work never belongs in this public source repository.
+private/
+outputs/
+local/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.vtt
+*.eml
+*.pst
+*.mbox
+__pycache__/
+*.pyc
+.DS_Store
+dist/
