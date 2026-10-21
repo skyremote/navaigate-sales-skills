@@ -8,7 +8,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SLUGS = ('meeting-prep', 'salesforce-admin', 'black-hat', 'build-my-voice', 'qbr')
-VERSION = '1.0.0'
+VERSION = json.loads((ROOT / '.claude-plugin/plugin.json').read_text())['version']
 
 
 def skill_files(folder):
@@ -85,7 +85,7 @@ def build():
     for relative in ('.claude-plugin/plugin.json', 'README.md', 'LICENSE'):
         plugin_entries[relative] = (ROOT / relative).read_bytes()
     # Include the documents linked by the packaged README, not private source notes.
-    for directory in ('docs', 'chatgpt'):
+    for directory in ('docs', 'chatgpt', 'evals'):
         for path in sorted((ROOT / directory).glob('*.md')):
             plugin_entries[str(path.relative_to(ROOT))] = path.read_bytes()
     write_zip(dist / f'navaigate-sales-plugin-v{VERSION}.zip', plugin_entries)

@@ -1,4 +1,4 @@
-# Validation for v1.0.0
+# Validation for v1.0.1
 
 Validated 21 October 2026. The evidence below establishes packaging correctness and behaviour on synthetic tasks. Participant tenant connections and in-product installations have not been exercised.
 

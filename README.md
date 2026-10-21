@@ -16,7 +16,7 @@ Five reusable workflows for technical-sales teams using Microsoft 365. Prepare f
 
 ## Get the pack
 
-- **Claude Cowork:** [download the plugin ZIP](https://github.com/skyremote/navaigate-sales-skills/releases/latest/download/navaigate-sales-plugin-v1.0.0.zip) and upload it through Cowork's custom plugin control.
+- **Claude Cowork:** [download the plugin ZIP](https://github.com/skyremote/navaigate-sales-skills/releases/latest/download/navaigate-sales-plugin-v1.0.1.zip) and upload it through Cowork's custom plugin control.
 - **Claude Code:** add this repository as a plugin marketplace, then install `navaigate-sales`.
 - **ChatGPT online:** [choose a self-contained Markdown workflow](chatgpt/), upload it to a private Project and ask ChatGPT to follow it. No terminal required.
 

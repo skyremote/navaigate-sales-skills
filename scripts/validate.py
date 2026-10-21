@@ -32,6 +32,17 @@ def validate():
             for name in archive.namelist():
                 assert not name.startswith('/') and '..' not in Path(name).parts and '\\' not in name
                 assert not any(part in ('private', 'outputs', '.git', 'node_modules') for part in Path(name).parts)
+            if archive_path.name.startswith('navaigate-sales-plugin-'):
+                import posixpath
+                names = set(archive.namelist())
+                for name in names:
+                    if not name.endswith('.md'):
+                        continue
+                    for target in re.findall(r'\[[^\]]+\]\(([^)]+)\)', archive.read(name).decode()):
+                        if re.match(r'^(?:https?://|mailto:|#)', target):
+                            continue
+                        destination = posixpath.normpath(posixpath.join(posixpath.dirname(name), target.split('#')[0]))
+                        assert destination in names or any(p.startswith(destination.rstrip('/') + '/') for p in names), f'Broken packaged link: {name} -> {target}'
     # Check local Markdown links in source docs; generated web bundles use in-file anchors.
     for directory in ('skills', 'docs'):
         for path in (ROOT / directory).rglob('*.md'):

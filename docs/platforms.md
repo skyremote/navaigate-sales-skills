@@ -24,7 +24,7 @@ An organisation may restrict plugin installation. Use its approved distribution 
 
 ## Claude Cowork
 
-1. Download `navaigate-sales-plugin-v1.0.0.zip` from [Releases](https://github.com/skyremote/navaigate-sales-skills/releases/latest).
+1. Download `navaigate-sales-plugin-v1.0.1.zip` from [Releases](https://github.com/skyremote/navaigate-sales-skills/releases/latest).
 2. Open Cowork, then **Customize > Plugins**, and upload the custom plugin file. Labels may vary by organisation and app version; use the custom plugin upload control.
 3. Start a task and select the skill using `/` or the skill picker. Use one of the README starter requests.
 4. Enable the organisation-approved Microsoft 365 connection separately. Select a private working folder when saving outputs.
